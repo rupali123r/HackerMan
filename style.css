@@ -1,0 +1,116 @@
+<style>
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+}
+
+body{
+	color: rgb(15, 167, 15);
+	  background-color: black;
+	  font-size: 20px;
+	  font-weight: 600;
+	  font-family: 'Source Code Pro', monospace;
+}
+
+.container{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	background-image: url("https://media.istockphoto.com/id/954696274/photo/hackers-standing-and-ready.jpg?s=170667a&w=0&k=20&c=d5YPOGa5Q39mt0PZo7ZMwurG5q0VLJ3uRIIpaibe8h4=");
+	background-repeat: no-repeat;
+	background-size: cover;
+	  
+}
+
+.side-bar h4{
+	text-align: center;
+	margin: 2rem 0;
+}
+
+.text h1{
+	margin: 1.5rem 0;
+}
+
+.target{
+	background-color: green;
+	 padding: 0.3rem 2rem;
+	 color: black;
+	 font-size: 20px;
+	 font-weight: bold;
+	 border: none;
+	 outline: none;
+	 border-radius: 5px;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.checkbox{
+	text-align: center;
+	margin-left: 1rem;
+	margin-bottom: 2rem;
+}
+
+.text{
+	text-align: center;
+	padding-bottom: 2.5rem;
+
+}
+#text{
+	text-align: start;
+	padding: 0.5rem 0;
+	padding-left: 3rem;
+
+}
+
+#main-box{
+	width: 50%;
+	background-color: rgba(0, 0, 0, 0.836);
+	height: 95%;
+}
+
+.side-bar{
+	background-image: url("https://www.textures4photoshop.com/tex/thumbs/matrix-code-animation-gif-free-animated-background-716.gif");
+	width: 20%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.925);
+	text-align: center;
+}
+
+.btn{
+
+	padding: 0.3rem 3rem;
+	background-color: green;
+	color: rgba(0, 0, 0, 0.658);
+	font-size: 1.2rem;
+	font-weight: 400;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+}
+
+.btn:hover{
+	background-color: rgba(0, 128, 0, 0.884);
+}
+
+
+@media(max-width: 400px){
+	.text h1{
+		font-size: 18px;
+	}
+
+	.side-bar h4{
+		font-size: 14px;
+	}
+
+	.target{
+		padding: 0.5rem 2rem;
+	}
+}
+
+	</style>

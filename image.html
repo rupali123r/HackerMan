@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Image Search App</title>
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Alkatra&family=Bona+Nova&family=Bree+Serif&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Courgette&family=Dancing+Script&family=Dongle&family=EB+Garamond&family=Edu+NSW+ACT+Foundation&family=Gentium+Book+Plus&family=Inconsolata&family=Josefin+Sans:wght@100;200;400&family=Kalam:wght@300&family=Kanit:wght@200&family=Lato:wght@300;700&family=Lobster+Two&family=Montserrat:wght@500&family=Mynerve&family=Nova+Oval&family=Nunito:wght@300&family=Open+Sans:wght@300;400&family=Oswald:wght@300;500&family=PT+Sans&family=PT+Serif&family=Pacifico&family=Poppins:wght@400;700&family=Raleway&family=Roboto+Condensed:wght@300;400&family=Roboto+Slab&family=Roboto:ital,wght@0,100;0,300;1,100;1,400&family=Source+Code+Pro:wght@200;500&family=Source+Sans+Pro&family=Spectral:wght@200&family=Titillium+Web:wght@200&family=Unbounded:wght@600&display=swap"
+		rel="stylesheet">
+
+
+	<style>
+		* {
+			padding: 0%;
+			margin: 0%;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Gentium Book Plus', serif;
+			width: 100%;
+			height: 100vh;
+			line-height: 1.6;
+		}
+
+		h1 {
+			margin: 40px 0 60px 0;
+			font-size: 36px;
+			font-weight: bold;
+			text-align: center;
+
+		}
+
+		form {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 60px;
+		}
+
+		#search-input {
+			width: 60%;
+			max-width: 400px;
+			padding: 10px 20px;
+			border: none;
+			box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+			font-size: 18px;
+			outline: none;
+			color: #333;
+		}
+
+		#search-button {
+			padding: 10px 20px;
+			background-color: #138065;
+			color: #fff;
+			border: none;
+			font-size: 18px;
+			box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+			cursor: pointer;
+			border-radius: 5px;
+			margin-left: 10px;
+		}
+
+		.search-results {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.search-result {
+			margin-bottom: 60px;
+			width: 30%;
+			height: 50%;
+			border-radius: 5px;
+			box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+		}
+
+		#result {}
+
+
+		.search-result img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: 0.2s ease-in-out;
+		}
+
+		.search-result:hover img {
+			opacity: 0.7;
+		}
+
+		.search-result a {
+			font-size: 20px;
+			text-decoration: none;
+			color: #333;
+			display: block;
+			padding: 10px;
+			text-transform: capitalize;
+		}
+
+		#show-more-button {
+			background-color: #008cba;
+			font-size: 18px;
+			border: none;
+			color: #fff;
+			padding: 10px 20px;
+			text-align: center;
+			display: block;
+			margin: 30px auto;
+			border-radius: 5px;
+			cursor: pointer;
+			display: none;
+		}
+
+		@media (max-width: 768px) {
+			.search-result {
+				width: 45%;
+
+			}
+
+			.search-results {
+				padding: 20px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.search-result {
+				width: 100%;
+
+
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Image Search App</h1>
+	<form action="">
+		<input type="text" id="search-input" placeholder="Search for images">
+		<button id="search-button">
+			Search
+		</button>
+	</form>
+
+	<div class="search-results">
+		<div class="search-result" id="result">
+			<img src="https://images.unsplash.com/photo-1650754254790-49f937e8169b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
+				alt="Mountain under the sky">
+			<a href="https://unsplash.com/photos/jZTqG7l8WSo" target="_blank">Mountain under the sky</a>
+		</div>
+
+
+
+		<div class="search-result">
+			<img src="https://images.unsplash.com/photo-1650754254790-49f937e8169b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
+				alt="Mountain under the sky">
+			<a href="https://unsplash.com/photos/jZTqG7l8WSo" target="_blank">Mountain under the sky</a>
+		</div>
+
+
+
+		<div class="search-result">
+			<img src="https://images.unsplash.com/photo-1650754254790-49f937e8169b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
+				alt="Mountain under the sky">
+			<a href="https://unsplash.com/photos/jZTqG7l8WSo" target="_blank">Mountain under the sky</a>
+		</div>
+	</div>
+
+	<button id="show-more-button">
+		Show More
+	</button>
+
+
+
+
+
+	<script>
+
+		const accessKey = "aEfn8IKe4XkMecE4Sir8r2Y20cv6_mlvfODHH2RCacs";
+
+		const formE1 = document.querySelector("form");
+		const inputE1 = document.getElementById("search-input");
+		const searchResults = document.querySelector(".search-results");
+		const showMore = document.getElementById("show-more-button");
+
+
+		let inputData = "";
+		let page = 1;
+		async function searchImages() {
+			inputData = inputE1.value;
+			const url = `https://unsplash.com/s/photos/api${page}&query=${inputData}&client_id=${accessKey}`;
+
+			const response = await fetch(url);
+			const data = await response.json();
+
+
+			const results = data.results;
+
+			if (page === 1) {
+				searchResults.innerHTML = "";
+			}
+
+			results.map((result) => {
+				const imageWrapper = document.createElement("div");
+				imageWrapper.classList.add("search-result");
+				const image = document.createElement("img");
+				image.src = result.urls.small;
+				image.alt = result.alt_description;
+				const imageLink = document.createElement("a");
+				imageLink.href = result.links.html;
+				imageLink.target = "-blank";
+				imageLink.textContent = result.alt_description;
+
+				imageWrapper.appendChild(image);
+				imageWrapper.appendChild(imageLink);
+				imageWrapper.appendChild(imageWrapper);
+
+
+			})
+
+			page++
+			if (page > 1) {
+				showMore.style.display = "block"
+
+			}
+		
+		}
+		formE1.addEventListener("submit", (event) => {
+			event.preventDefault()
+			page = 1;
+			searchImages()
+		})
+
+		showMore.addEventListener("click", () => {
+			searchImages();
+		});
+
+
+
+
+
+
+
+
+
+
+
+console.log(accessKey)
+
+	</script>
+</body>
+
+</html>
